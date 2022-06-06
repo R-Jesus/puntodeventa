@@ -31,7 +31,7 @@ class PurchaseController extends Controller
             "quantity"=>$request->quantity[$key], "price"=>$request->price[$key]);
         }
 
-        $purchase->shoppingDetails()->createMany($results);
+        $purchase->purchaseDetails()->createMany($results);
 
         return redirect()->route('purchases.index');
     }
