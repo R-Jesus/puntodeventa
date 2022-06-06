@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categoties = Category::get();
+        $categories = Category::get();
         return view('admin.category.index', compact('categories'));
     }
 
