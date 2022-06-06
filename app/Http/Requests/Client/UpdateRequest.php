@@ -25,7 +25,7 @@ class UpdateRequest extends FormRequest
     {
         return [
             'name'=>'string|required|max:255',
-            'dni'=>'string|required|unique:clients, dni'.$this->route('client')->id.'|max:8|min:11',
+            'dni'=>'string|required|unique:clients, dni'.$this->route('client')->id.'|max:8|min:8',
             'ruc'=>'string|required|unique:clients, ruc'.$this->route('client')->id.'|max:11|min:11',
             'address'=>'string|required|max:255',
             'phone'=>'string|required|unique:clients, phone'.$this->route('client')->id.'|max:10|min:10',
